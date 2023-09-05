@@ -361,6 +361,16 @@ td{
     border-bottom: 1pt solid black;
 }
 
+.main_page{
+    color:white;
+    padding-right: 20px;
+}
+
+.main_page:hover{
+    color:blue;
+}
+
+
 /* <!------------------------------ FLOWERS -----------------------------> */
 
 .footnote{
