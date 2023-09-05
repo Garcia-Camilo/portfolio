@@ -1,0 +1,68 @@
+@font-face {
+    font-family: business;
+    src: url(fonts/00BusinessHistory-Regular.woff);
+}
+
+html { 
+    background: url('background-inverted.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    align-items: center;
+}
+
+#title{
+    position: fixed;
+    top: 10%;
+    left: 2%;
+    z-index: 1000;
+}
+
+a > h2{
+    position: relative;
+    z-index: 1000;
+    font-size: 3vw;
+    color: red;
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    margin-left: none;
+}
+
+h2:hover{
+    color: black;
+}
+
+h1, h2 {
+    font-family: business;
+    color: black;
+    font-weight: normal;
+}
+
+h1{
+    font-size: 3vw;
+    margin-left: 5vw;
+    display: inline;
+}
+
+#game {
+	background:black;
+	width:60vw;
+	max-width:60vh;
+	margin:0;
+	display:block;
+}
