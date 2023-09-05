@@ -313,6 +313,10 @@ pre:hover{
     left: 50px;     
 } */
 
+summary > a{
+    font-size: 19pt;
+}
+
 .links p{
     font-family: GaramongItalic;
     color:black;
@@ -350,8 +354,8 @@ th{
 
 td{
     vertical-align: top;
-    padding-top: 7pt; 
-    padding-bottom: 5pt;
+    padding-top: 14pt; 
+    padding-bottom: 22pt;
     padding-left: 3%; 
     padding-right: 3%;
     border-bottom: 1pt solid black;
