@@ -30,6 +30,21 @@ body{
     z-index: 1000;
 }
 
+#instructions{
+    position: fixed;
+    top: 5%;
+    right: 30%;
+    z-index: 1000;
+    background-color: black;
+}
+
+#instructions h1{
+    font-size: 1.5vw;
+    color: white;
+    margin-right: 5vw;
+}
+
+
 a > h2{
     position: relative;
     z-index: 1000;
