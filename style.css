@@ -256,6 +256,14 @@ h1 {
     border: 1pt solid black ;
 }
 
+.websites_link a{
+    font-size: 39pt !important;
+    color: black;
+}
+
+.websites_link a:hover {
+    color: blue;
+}
 
 a > img:hover {
     box-shadow: 0 0 5px 0px blue;

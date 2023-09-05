@@ -6,7 +6,6 @@ var rotterdam_link = document.querySelector(".rotterdam_link");
 var systems_link = document.querySelector(".systems_link");
 var books_link = document.querySelector(".books_link");
 var images_link = document.querySelector(".images_link");
-var websites_link = document.querySelector(".websites_link");
 var objects_link = document.querySelector(".objects_link");
 var verbs_link = document.querySelector(".verbs_link");
 var process_link = document.querySelector(".process_link");
@@ -15,12 +14,6 @@ var pub_link = document.querySelector(".pub_link")
 var close_btn = document.querySelector(".close-btn");
 close_btn.addEventListener("click", function(){
     document.querySelector(".CV").style.display = "none"; 
-})
-
-var close_btn1 = document.querySelector(".close-btn1");
-close_btn1.addEventListener("click", function(){
-    document.querySelector(".websites").style.display = "none"; 
-    web_e = !web_e;
 })
 
 ////// hide section when clicking ouotside 
@@ -68,23 +61,6 @@ process_link.addEventListener("click", function() {
         hideExecuted = true;
         setTimeout(hide, 500); 
     } 
-});
-
-var web_e = false;
-var websites = document.querySelector(".websites");
-
-websites_link.addEventListener("click", function() {
-    var section = document.querySelectorAll(".section");
-    for (var i = 0; i < section.length; i++) {
-        section[i].style.display = "none";
-    }
-
-    web_e = true;
-    if (web_e) {
-        websites.style.display = "inline-block";
-        hideExecuted = true;
-        setTimeout(hide, 500); 
-    }
 });
 
 
