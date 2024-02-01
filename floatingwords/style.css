@@ -1,0 +1,276 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+:root{
+    --green:rgb(7, 152, 60);
+    --white: snow;
+    --black: rgb(19, 19, 19);
+}
+
+body{
+    margin:0;
+    width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: var(--black);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+a{
+    cursor: pointer;
+}
+
+.back-btn{
+    cursor: pointer;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    align-self: center;
+    text-align: center;
+    margin-bottom: 20%;
+    padding: 5px 10px;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+section:has(.drawing){
+    top: 4px;
+    position: absolute;
+}
+
+#drawings_section{
+    display: none;
+}
+
+.drawing{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    margin-top: -4px;
+}
+
+#info_section{
+    background-color: var(--white);
+}
+
+#text_info {
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 1em;
+    display: none;
+    position: absolute;
+    width: 94%;
+    background-color: var(--white);
+    margin: 0;
+    padding: 5px 10px;
+}
+
+#text_info p{
+    margin: 0;
+    margin-bottom: 5px;
+    color: var(--black);
+}
+
+#text_info a{
+    color: var(--green);
+    font-style: italic;
+    text-decoration: dotted;
+}
+
+#text_info a:visited{
+    color:var(--green);
+}
+
+.btn{
+    background-color: var(--white);
+    color: var(--black);
+    text-decoration: none;
+    padding: 0 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+
+.text{
+    display: flex;
+    top: 50%;
+    width: 100%;
+    height: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-indent: 5%;
+    z-index: 99;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.text::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.text {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.text:first-child{
+    margin-top: 20%;
+}
+
+.text p{
+    margin-bottom: 35%;
+}
+
+.text .left {
+    text-align: left;
+    width: 45%;
+}
+
+.text .right {
+    width: 45%;
+}
+
+.up{
+    z-index: 101;
+}
+
+.down{
+    z-index: 99;
+}
+
+.center{
+    text-align: center;
+}
+
+.thunderbolts_text{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    width: 50%;
+    text-align: center;
+}
+
+#last_p {
+    margin-bottom: 150%;
+}
+
+.shop{
+    display: flex;
+    position: absolute;
+    top: -1100%;
+    width: 100vw;
+    height: fit-content;
+    overflow-y: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 999;
+    mix-blend-mode: screen;
+    filter: invert(1);
+    transition: transform 0.1s ease;
+}
+
+.garment{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 35%;
+    /* filter: invert(1) ; */
+}
+
+.garment img{
+    width: 25%;
+    z-index: 98;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+figcaption{
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    header{
+        width: 100vw;
+        justify-content: space-around;
+        background: var(--white);
+    }
+
+    #text_info{
+        left: 0;
+        width: 95%;
+    }
+
+    .shop{
+        top: -800%;
+    }
+
+    .text{
+        font-size: 1em;
+    }
+
+    .text .left, .text .right{
+        width: 80%;
+    }
+
+    .text p {
+        margin-bottom: 80%;
+    }
+
+    .garment {
+        margin-bottom: 75%;
+    }
+
+    .garment img{
+        width: 50%;
+    }
+
+    .thunderbolts_text{
+        margin-left: 0;
+    }
+
+
+}
