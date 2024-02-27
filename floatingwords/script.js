@@ -18,19 +18,6 @@ info_btn.addEventListener('click', () => {
     }
 });
 
-var drawings_state = false;
-
-drawings_btn.addEventListener('click', () => {
-    if (drawings_state == true){
-        drawings_section.style.display = 'none';
-        return drawings_state = false;
-    }
-    if (drawings_state ==false){
-        drawings_section.style.display = 'block';
-        return drawings_state = true;
-    }
-});
-
 
 const shop_section = document.querySelector('.shop');
 const text_section = document.querySelector('.text');

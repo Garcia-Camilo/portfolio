@@ -42,7 +42,7 @@ a{
 .back-btn{
     cursor: pointer;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     background-color: var(--black);
     color: var(--white);
     align-self: center;
@@ -52,7 +52,8 @@ a{
 }
 
 p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
     color: var(--white);
 }
 
@@ -62,7 +63,9 @@ header{
     position: fixed;
     top: 0px;
     left: 0px;
+    padding: 2px;
     z-index: 1000;
+    background-color: var(--black);
 }
 
 section:has(.drawing){
@@ -71,7 +74,9 @@ section:has(.drawing){
 }
 
 #drawings_section{
-    display: none;
+    display: block;
+    top: 0;
+    left: 0;
 }
 
 .drawing{
@@ -82,24 +87,25 @@ section:has(.drawing){
 }
 
 #info_section{
-    background-color: var(--white);
+    background-color: var(--black);
 }
 
 #text_info {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     text-indent: 1em;
     display: none;
     position: absolute;
     width: 94%;
-    background-color: var(--white);
+    background-color: var(--black);
     margin: 0;
     padding: 5px 10px;
+    border-bottom: 1pt solid var(--white);
 }
 
 #text_info p{
     margin: 0;
     margin-bottom: 5px;
-    color: var(--black);
+    color: var(--white);
 }
 
 #text_info a{
@@ -113,12 +119,13 @@ section:has(.drawing){
 }
 
 .btn{
-    background-color: var(--white);
-    color: var(--black);
+    background-color: none;
+    color: var(--white);
     text-decoration: none;
     padding: 0 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     font-size: 15pt;
+    font-weight: 100;
 }
 
 .text{
@@ -126,7 +133,7 @@ section:has(.drawing){
     top: 50%;
     width: 100%;
     height: fit-content;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     font-size: 1.5em;
     text-indent: 5%;
     z-index: 99;
@@ -230,13 +237,28 @@ figcaption{
     padding: 0 10px;
 }
 
+#zine_section{
+    margin-top: 20%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.zine{
+    width: 43%;
+    margin: 5%;
+}
+
+.cover{
+    width: 22%;
+}
 
 @media screen and (max-width: 800px) {
 
     header{
         width: 100vw;
         justify-content: space-around;
-        background: var(--white);
+        background: var(--black);
     }
 
     #text_info{
@@ -270,6 +292,15 @@ figcaption{
 
     .thunderbolts_text{
         margin-left: 0;
+    }
+
+    .zine{
+        width: 70%;
+        margin: 5%;
+    }
+
+    .cover{
+        width: 35%;
     }
 
 
