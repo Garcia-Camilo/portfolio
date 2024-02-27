@@ -380,10 +380,10 @@ mini_sweatshirt.addEventListener('click', function() {
         if (clickCount === 2) {
             if (mini_sweatshirt.src.endsWith('images/mini-sweatshirt.png')) {
                 // If it's the first image, change it to the second image
-                mini_sweatshirt.src = 'images/mini_sweatshirt-1.png';
+                mini_sweatshirt.src = 'images/mini-sweatshirt-1.png';
             } else {
                 // If it's the second image (or any other), change it back to the first image
-                mini_sweatshirt.src = 'images/mini_sweatshirt.png';
+                mini_sweatshirt.src = 'images/mini-sweatshirt.png';
             }
 
             // Reset click count after the second click
@@ -393,12 +393,12 @@ mini_sweatshirt.addEventListener('click', function() {
         // Increment clickCount for each click
         clickCount++;
     } else {
-        if (mini_sweatshirt.src.endsWith('images/mini_sweatshirt.png')) {
+        if (mini_sweatshirt.src.endsWith('images/mini-sweatshirt.png')) {
             // If it's the first image, change it to the second image
-            mini_sweatshirt.src = 'images/mini_sweatshirt-1.png';
+            mini_sweatshirt.src = 'images/mini-sweatshirt-1.png';
         } else {
             // If it's the second image (or any other), change it back to the first image
-            mini_sweatshirt.src = 'images/mini_sweatshirt.png';
+            mini_sweatshirt.src = 'images/mini-sweatshirt.png';
         }
     }
 });
@@ -429,7 +429,7 @@ black_shirt.addEventListener('click', function() {
     } else {
         if (black_shirt.src.endsWith('images/black-shirt.png')) {
             // If it's the first image, change it to the second image
-            black_shirt.src = 'images/black_shirt-1.png';
+            black_shirt.src = 'images/black-shirt-1.png';
         } else {
             // If it's the second image (or any other), change it back to the first image
             black_shirt.src = 'images/black-shirt.png';
