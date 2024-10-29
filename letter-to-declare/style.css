@@ -1,0 +1,140 @@
+
+html{
+    background-color: snow;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: snow;
+    color: coral;
+    padding: 5% 30%;
+    margin: 0;
+    z-index: 1;
+}
+
+::selection {
+    background-color: olive;
+    color: #fff;
+}
+
+pre{
+    font-family: 'Courier New', Courier, monospace;
+    width: 200%;
+    margin-left:-75%;
+}
+
+pre > a {
+    color: olive;
+    text-decoration: none;
+}
+
+p{
+    margin: 1em 0;
+}
+
+a{
+    color: olive;
+    text-decoration: none;
+}
+
+mark{
+    background-color: olive;
+    color: white;
+}
+
+.letter{
+    z-index: 3;
+    position: relative;
+}
+
+details{
+    display: inline;
+}
+
+details[open]{
+    display: block;
+}
+
+summary{
+    display: block;
+}
+
+details > summary {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details > p {
+    margin-bottom: 0;
+    margin-top: 1em;
+}
+
+#drawing{
+    position: fixed; 
+    display: none;
+    width: 100%; 
+    height:100%; 
+    top: 0; 
+    left: 0; 
+    z-index: 2;
+    mix-blend-mode: multiply;
+}
+
+#color-filler{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: contrast(1);
+    background-color: coral;
+    mix-blend-mode: screen;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.figure{
+    color: olive;
+}
+
+.select{
+    cursor: pointer;
+    color: olive;
+}
+
+.hover:hover{
+    text-decoration: underline 0.8pt solid;
+}
+
+#possessed {
+    position: absolute;
+    display: none;
+    animation-name: moveAround;
+    animation-duration: 10s;
+    animation-iteration-count:initial;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveAround {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 1000px);
+    }
+}
+
+.invoke p{
+    display: inline;
+}
+
+#inspect_me{
+    display: none;
+}

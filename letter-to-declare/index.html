@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Letter to declare</title>
+</head>
+
+<body>
+       <section class="letter">
+           <p>Dear Declarations,</p>
+           <br>
+           <p>I'm Camilo Garcia, a visual artist, designer and amateur hacker/coder who likes to think and make physical and digital works.</p> <br>
+           
+           <p>Although I jump between practices, <br> I draw at <span class="figure select" id="heart">heart</span>.<br>
+                Coding practices have constrained my gestures, <br> my hands are restricted from molding and
+                  very often impulses of crafting possessed <span id="me" class="select">me</span>. <sup id="possessed" style="display: none;">&lt;br&gt;</sup></p>
+                  <br>   
+            <div class="invoke" style="margin:1em 0;"><p>However, as a coder, <br> 
+                the text became poetry that </p>
+                <details><summary class="select hover">invokes:</summary>
+                    <p>
+                        <br>
+                        <sup id="midnightblue" class="select hover"><span>midnightblue</span><span style="width: 7px; height: 7px; display: inline-block; background-color: midnightblue; border: 1pt solid gray; margin-left: 3px;"></span></sup> tinted light, <br><br>
+                        <sup id="snow" class="select hover"><span>snow</span><span style="width: 7px; height: 7px; display: inline-block; background-color: snow; border: 1pt solid gray; margin-left: 3px;"></span></sup> falls on <sup id="olive" class="select"><span>olive <span style="width: 7px; height: 7px; display: inline-block; background-color: olive; border: 1pt solid gray"></span></span></sup> lines, <br><br>
+                        <sup id="coral" class="select hover"><span>coral</span><span style="width: 7px; height: 7px; display: inline-block; background-color: coral; border: 1pt solid gray; margin-left: 3px;"></span></sup> dawn whispers.
+                    </p>
+                </details> <br>
+                <p>colors have names and<br>
+                comments are notes to the <span class="select hover" id="self">self</span><sup id="inspect_me">(inspect me)</sup>.<br></p>
+            <!-- Let's not forget to show here the astrology inspired website were CSS colors were conected with the 4 elements: fire, water, wind, earth. https://camilogarcia.info/sunday-sites/astro-wood/-->
+            </div>
+            <br>
+            <p>The understanding of technological infrastructures <br> have shaped my practice and make it possible, </p>
+            <br>
+            <pre>                                     
+                home-brew <a class="hover" href="https://garden.attempt.press/" target="_blank">servers</a>,   
+                                      routers,           
+                                           config files,                                    
+                             
+                                figures,
+                                       shapes 
+                                                      and forms          
+                
+                     stated as <a class="hover" href="https://issue.xpub.nl/13/ATATA/index.html" target="_blank">words</a>,
+           
+                                                <a class="hover" href="https://camilogarcia.info/thewhole/" target="_blank">characters</a>,
+                
+           
+                                     or <a class="hover" href="https://diffraction.attempt.press/" target="_blank">diffracted</a> drawings
+            </pre>
+            <br>
+            <p>I'm super interested in joining Declarations to have the possibility to experiment and share with others experiences crafting with CSS. As it would be an opportunity to learn, converse and deepen my practice.</p>
+            <br>
+            <p>Moreover, I would be happy to share my journey through translation using CSS in web-to-print projects. From frustrating challenges invoking the magical @page at-rule to the discovery of handy tricks to number pages or add running titles!</p>
+            <br>
+            <p>You can check more of my work in my <a href="https://camilogarcia.info" class="olive hover" target="_blank">website</a>.</p>
+            <br>
+            <p>Looking forward to hear from you,</p>
+            <p>Warmly,</p>
+            <p>Camilo Garcia A. </p>
+       </section>
+    <div id="drawing"><div id="color-filler"></div><img src="images/drawing.png"></div>
+</body>
+
+<script>
+
+    const img = document.querySelector('#drawing');
+
+    const display = ()=>{
+        img.style.display = "block";
+    }
+
+    const hide = ()=>{
+        img.style.display = "none";
+    }
+
+    const heart = document.querySelector('#heart');
+
+    heart.addEventListener('mouseover', display);
+    heart.addEventListener('mouseout', hide);
+
+    var meSpan = document.getElementById('me');
+    var supElement = document.getElementById('possessed');
+
+    meSpan.addEventListener('mouseover', function() {
+        supElement.style.display = 'inline'; 
+    });
+
+    const midnightblue = document.querySelector('#midnightblue');
+    const snow = document.querySelector('#snow');
+    const olive = document.querySelector('#olive');
+    const coral = document.querySelector('#coral');
+    const select_items = document.querySelectorAll('.select');
+    var midnightblue_clicked = false;
+    var snow_clicked = false;
+    var coral_clicked = false;
+
+    midnightblue.addEventListener('click', function(){
+        if (midnightblue_clicked == false){
+            document.body.style.background = "midnightblue";
+            midnightblue.firstChild.innerHTML = "snow"
+            midnightblue.lastChild.style.background = "snow";
+            midnightblue_clicked = true
+        } else {
+            document.body.style.background = "snow";
+            midnightblue.firstChild.innerHTML = "midnightblue"
+            midnightblue.lastChild.style.background = "midnightblue";
+            midnightblue_clicked = false;
+        }
+    })
+
+    snow.addEventListener('click', function(){
+        if (snow_clicked == false){
+            document.body.style.color = "snow";
+            snow.firstChild.innerHTML = "coral"
+            snow.lastChild.style.background = "coral";
+            snow_clicked = true;
+        } else {
+            document.body.style.color = "coral";
+            snow.firstChild.innerHTML = "snow"
+            snow.lastChild.style.background = "snow";
+            snow_clicked = false;
+        }
+    })
+
+    olive.addEventListener('mouseover', function(){
+        var paragraphs = document.body.querySelectorAll('p');
+        var pres = document.body.querySelectorAll('pre');
+
+        paragraphs.forEach(function(paragraph) {
+            paragraph.style.textDecoration = "line-through";
+            paragraph.style.textDecorationColor = "olive";
+            paragraph.style.textDecorationThickness = "8px";
+        });
+        pres.forEach(function(pre) {
+            pre.style.textDecoration = "line-through";
+            pre.style.textDecorationColor = "olive";
+            pre.style.textDecorationThickness = "8px";
+        });
+    })
+
+    olive.addEventListener('mouseout', function(){
+        var paragraphs = document.body.querySelectorAll('p');
+        var pres = document.body.querySelectorAll('pre');
+
+        paragraphs.forEach(function(paragraph) {
+            paragraph.style.textDecoration = "none";
+        });
+        pres.forEach(function(pre) {
+            pre.style.textDecoration = "none";
+        });
+    })
+
+    coral.addEventListener('click', function(){
+        if (coral_clicked == false){
+            select_items.forEach(element => {
+            element.style.color = 'coral';
+            });
+            coral.firstChild.innerHTML = "olive"
+            coral.lastChild.style.background = "olive";
+            coral_clicked = true;
+        } else {
+            select_items.forEach(element => {
+            element.style.color = 'olive';
+            });
+            coral.firstChild.innerHTML = "coral"
+            coral.lastChild.style.background = "coral";
+            coral_clicked = false;
+        }
+    })
+
+    const self = document.querySelector("#self");
+    const inspect_me = document.querySelector("#inspect_me");
+
+    self.addEventListener('click', function(){
+        inspect_me.style.display = "inline";
+    })
+
+
+</script>
+</html>
